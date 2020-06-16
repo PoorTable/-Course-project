@@ -8,7 +8,6 @@
         @{
             foreach (var TV in Model)
             {
-                
                 <div class="col-lg-3" style="text-align:center">
                     <img src="@TV.img" alt="@TV.model" style="width:150px" />
                     <h2>@TV.model</h2>
@@ -23,7 +22,19 @@
                         </div>
                         <input type="submit" value="Подробнее" class="btn btn-outline-primary" />
                     </form>
-                </div>       
+                    <form asp-action="AddToCart" asp-controller="home">
+                        <div style="display:none">
+                            <p>
+                                <input type="text" name="I" value="@TV.id" />
+                            </p>
+                            <p>
+                                <input type="text" name="U" value="@User.Identity.Name" />
+                            </p>
+                        </div>
+                        <input style="margin-top: 1rem" type="submit" value="B козрзину" class="btn btn-outline-primary" />
+                    </form>
+                </div>
             }
-          }
-     </div>
+        }
+
+    </div>

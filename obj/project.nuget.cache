@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "59Lct3PHZalXBqwpimpOVRNEtRlADcFdG7wS5e0O8dGL2WYAa1n7dKe0y32H7UEf03gUm/hNHt7Cy4fYpYVn+g==",
+  "dgSpecHash": "qKpJTg0f9DyHceMUMMoohxfBCFEvhJItyMaSB0byyEwSHZlrJ3wBNi2NO2q/LJ19QKsfcX+fMEqDtquHE3oICA==",
   "success": true,
-  "projectFilePath": "E:\\КПиЯП\\kp2\\kp2.csproj",
+  "projectFilePath": "C:\\Users\\PoorT\\Source\\Repos\\-Course-project\\kp2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PoorT\\.nuget\\packages\\mailkit\\2.7.0\\mailkit.2.7.0.nupkg.sha512",
     "C:\\Users\\PoorT\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

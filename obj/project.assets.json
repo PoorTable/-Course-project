@@ -9363,11 +9363,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\КПиЯП\\kp2\\kp2.csproj",
+      "projectUniqueName": "C:\\Users\\PoorT\\Source\\Repos\\-Course-project\\kp2.csproj",
       "projectName": "kp2",
-      "projectPath": "E:\\КПиЯП\\kp2\\kp2.csproj",
+      "projectPath": "C:\\Users\\PoorT\\Source\\Repos\\-Course-project\\kp2.csproj",
       "packagesPath": "C:\\Users\\PoorT\\.nuget\\packages\\",
-      "outputPath": "E:\\КПиЯП\\kp2\\obj\\",
+      "outputPath": "C:\\Users\\PoorT\\Source\\Repos\\-Course-project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PoorT\\AppData\\Roaming\\NuGet\\NuGet.Config",
