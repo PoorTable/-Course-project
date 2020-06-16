@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "View";
+    Layout = "_Layout";
+}
+@using kp2.Models
+@using  kp2.ViewModels
+@model CM
+@{
+    List<TV> ds = new List<TV>();
+    int id = Convert.ToInt32(ViewData["TID"]);
+    foreach (var T in Model.TVs)
+    {
+        if (id == T.id)
+        {
+            ds.Add(T);
+        }
+
+    }
+
+    <form asp-action="AddToCart" asp-controller="home">
+        <div class="mb-2 mt-5">
+            <img src="@ds[0].img" alt="@ds[0].model" style="width:150px" />
+            <br />
+            <h2>@ds[0].model</h2>
+            <br />
+            <h2 asp-for="price">@ds[0].price.ToString("c")</h2>
+            <br />
+            <h2>@ds[0].LongDescr</h2>
+            <div class="form-group">
+                <div style="display:none">
+                    <p>
+                        <input type="text" name="I" value="@ds[0].id" />
+                    </p>
+                    <p>
+                        <input type="text" name="U" value="@User.Identity.Name" />
+                    </p>
+                </div>
+                <input type="submit" value="Добавить в козрзину" class="btn btn-outline-primary" />
+            </div>
+        </div>
+    </form>
+}
+

@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "ЛК";
+    
+}
+@model kp2.Models.User
+
+<h2>Личный кабинет</h2>
+<a asp-controller="Home" asp-action="Privacy"><h2>Ваша Корзина</h2></a>
+
+<div id="inf">
+    <h2 class="mb-5 mt-5"> Добавить информацию о себе </h2>
+    <form asp-action="AddInfo" asp-controller="Account" asp-anti-forgery="true">
+        <div class="form-group">
+            <div>
+                <p>
+                    <label type="text" name="Number"> Номер телефона </label>
+                    <input type="text" name="Number" value="@ViewData["UPN"]" />
+                </p>
+                <p>
+                    <label type="text" name="Number"> Адрес проживания </label>
+                    <input type="text" name="Adres" value="@ViewData["UAD"]" />
+                </p> 
+            </div>
+            <input type="submit" value="Сохранить" class="btn btn-default  mb-5"  />
+        </div>
+    </form>
+</div>
+<form asp-action="Logout" asp-controller="Account" asp-anti-forgery="true">
+    <div class="form-group">
+        <input type="submit" value="Выйти из аккаунта" class="btn btn-outline-dark" />
+    </div>
+</form>

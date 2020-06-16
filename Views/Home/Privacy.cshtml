@@ -1,0 +1,46 @@
+﻿@using  kp2.Models
+@using  kp2.ViewModels
+@model CM
+@{ViewData["Title"] = "Корзина"; }
+
+<h1>@ViewData["Title"]</h1>
+
+@{
+    List<TV> ds = new List<TV>();
+    int a = Convert.ToInt32(ViewData["UID"]);
+    <form asp-controller="Home" asp-action="Buy" asp-anti-forgery="true">
+        <div class="form-group">
+            <input type="submit" value="Оформить заказ" class="btn btn-outline-dark" />
+        </div>
+    </form>
+    foreach (var C in Model.Cts)
+    {
+        if (C.idUser == a)
+        {
+            ds.Add(C.TV);
+            
+        }
+        @**@
+
+    }
+}
+<div class="goods" style="display:flex; flex-wrap:wrap;">
+    @{
+        if (ds.Count() > 0)
+        {
+            foreach (var C in ds)
+            {
+                <div class="col-md-3" style="text-align:center">
+                    <img src="@C.img" alt="@C.model" style="width:150px" />
+                    <h2>@C.model</h2>
+                    <p2>Price = @C.price</p2>
+                    <br />
+                </div>
+            }
+        }
+        else
+        {
+            <div class="align-content-lg-center"> <h2> Ваша корзина пуста </h2> </div>
+        }
+    }
+</div>

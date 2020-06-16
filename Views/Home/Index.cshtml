@@ -1,0 +1,29 @@
+﻿@using  kp2.Models
+@model IEnumerable<TV>
+@{
+    ViewData["Title"] = "Главная";
+}
+    <h2>All TVs</h2>
+    <div class="goods" style="display:flex; flex-wrap:wrap;">
+        @{
+            foreach (var TV in Model)
+            {
+                
+                <div class="col-lg-3" style="text-align:center">
+                    <img src="@TV.img" alt="@TV.model" style="width:150px" />
+                    <h2>@TV.model</h2>
+                    <p>@TV.ShortDescr</p>
+                    <p asp-for="price">@TV.price.ToString("c")</p>
+                    <br />
+                    <form asp-action="Info" asp-controller="home">
+                        <div style="display:none">
+                            <p>
+                                <input type="text" name="I" value="@TV.id" />
+                            </p>
+                        </div>
+                        <input type="submit" value="Подробнее" class="btn btn-outline-primary" />
+                    </form>
+                </div>       
+            }
+          }
+     </div>
