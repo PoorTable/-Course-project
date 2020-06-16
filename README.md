@@ -1,2 +1,3 @@
-# kursach
- 3 kurs
+# Course Project
+ 3rd course
+Kushner Ilya 
