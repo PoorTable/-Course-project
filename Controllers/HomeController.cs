@@ -35,7 +35,14 @@ namespace kp2.Controllers
         {
             ViewData["name"] = User.Identity.Name;
             var TVs = db.TVs.ToList();
+            if (User.Identity.IsAuthenticated)
+            {
+            User u = db.Users.FirstOrDefault(u => u.Email == User.Identity.Name);
+            List<Cart> C = db.Carts.Where(c => c.idUser == u.Id).ToList();
+            ViewData["das"] = C.Count;
+            }
             return View(TVs);
+
         }
         public async Task<IActionResult> Create() 
         {
